@@ -11,7 +11,7 @@ Mise en coeuvre d'un DAG qui permet de :
 - open_weather_dag.py : fichier du DAG qu'il faudra copier dans le répertoire dags/
 - utils.py : script regroupant les fonctions utulisées dans les taches du DAG. Il faut aussi le copier dans le répertoire dags/
 - README.md : description détaillée du DAG 
-- DAG.png : schéma / diagrame du DAG
+- DAG.png : schéma du DAG
 
 ## Les étape de mise en oeuvre
 - Installation de Airflow
@@ -63,7 +63,7 @@ chmod +x setup.sh
 
 - transform_and_create_fulldata (PythonOperator) : Utilise également l'opérateur PythonOperator pour exécuter la fonction transform_data_into_csv, qui cette fois concatène tous les fichiers collectés (pas seulement les 20 derniers) dans un fichier unique nommé fulldata.csv. Cette tâche est cruciale pour préparer un ensemble de données complet à partir de toutes les données disponibles.
 
-- check_fulldata_file (ShortCircuitOperator) : Utilise un autre ShortCircuitOperator pour vérifier si le fichier fulldata.csv existe et contient plus de 15 lignes. Si cette condition n'est pas remplie, il court-circuite les tâches suivantes. Cela permet de s'assurer que l'ensemble de données est suffisamment large pour procéder à l'entraînement des modèles. En effet si jamais à l'issue de la 1ere tache il ya des fichier json vide, ce court-circuit supplémentaire permet de confirmer qu'il ya assez de données pour pouvoir démarrer l'entrainement des modèles de machine Learning
+- check_fulldata_file (ShortCircuitOperator) : Utilise un autre ShortCircuitOperator pour vérifier si le fichier fulldata.csv existe et contient plus de 15 lignes. Si cette condition n'est pas remplie, il court-circuite les tâches suivantes. Cela permet de s'assurer que l'ensemble de données est suffisamment large pour procéder à l'entraînement des modèles. En effet si jamais à l'issue de la 1ere tâche il ya des fichier json vide, ce court-circuit supplémentaire permet de confirmer qu'il ya assez de données pour pouvoir démarrer l'entrainement des modèles de machine Learning
 
 - select_best_models (groupe de tâches avec PythonOperator) : Ce groupe de tâches contient trois tâches, chacune utilisant un PythonOperator pour entraîner et sélectionner le meilleur modèle à partir des trois algorithmes suivants :
 
