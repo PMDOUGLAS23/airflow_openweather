@@ -41,7 +41,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-### Schema du DAG
+### Schéma du DAG
 
 ![Image](DAG.jpeg)
 
