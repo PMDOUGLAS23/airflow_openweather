@@ -7,8 +7,9 @@ Mise en coeuvre d'un DAG qui permet de :
 - et de comparer et choisir le meilleur modèle
 
 ## Organisation du projet 
-< arborescence du repos>
-
+```bash
+tree
+```
 
 ## Mise en oeuvre
 - Installation de Airflow
