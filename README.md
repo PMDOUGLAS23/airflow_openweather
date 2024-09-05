@@ -1,10 +1,10 @@
 # Apache Airflow open_weather_dag
 Mise en coeuvre d'un DAG qui permet de :
-- récupérer des informations depuis l' API de données météo en ligne OpenWeatherData
-- stocker les données collectées
-- transformer les données
-- Entrainer des modèles de machine learning
-- et de comparer et choisir le meilleur modèle
+- récupérer des informations depuis l' API de données météo en ligne OpenWeatherData,
+- stocker les données collectées,
+- transformer les données,
+- Entrainer des modèles de machine learning,
+- Comparer les modèles et choisir le meilleur modèle.
 
 ## Contenu du répertoire:
 - setup.sh qui permet d'installer Airflow
