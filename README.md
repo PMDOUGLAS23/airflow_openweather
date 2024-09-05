@@ -28,11 +28,11 @@ Mise en coeuvre d'un DAG qui permet de:
 ### Installation de Airflow
 
 l'installation se fait à partir du fichier setup.sh qui : 
-    - télécharge une nouvelle configuration,
-    - créer les répertoires nécessaires, 
-    - ajuster les permissions, 
-    - initialise l'environnement Airflow et 
-    - démarre finalement les conteneurs nécessaires en arrière-plan.
+- télécharge une nouvelle configuration,
+- créer les répertoires nécessaires, 
+- ajuster les permissions, 
+- initialise l'environnement Airflow et 
+- démarre finalement les conteneurs nécessaires en arrière-plan.
 
 Dans la ligne de commande, se positionner dans le répertoire projet, 
 attribuer les permissions d'exécution au script setup.sh puis exécuter le script.
