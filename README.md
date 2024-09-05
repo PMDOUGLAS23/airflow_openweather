@@ -1,4 +1,4 @@
-# airflow open_weather_dag
+# Apache Airflow open_weather_dag
 Mise en coeuvre d'un DAG qui permet de :
 - récupérer des informations depuis l' API de données météo en ligne OpenWeatherData
 - stocker les données collectées
