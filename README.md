@@ -43,8 +43,8 @@ chmod +x setup.sh
 
 ## Schema du DAG
 
-!(DAG.png)
-
+!(DAG.jpeg)
+![Image](DAG.jpeg)
 
 ## Variables Airflow :
 
