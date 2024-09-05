@@ -9,14 +9,14 @@ Mise en coeuvre d'un DAG qui permet de :
 ## Contenu du répertoire
 - setup.sh qui permet d'installer Airflow
 - open_weather_dag.py : fichier du DAG qu'il faudra copier dans le répertoire dags/
-- utils.py : script regroupant les fonctions utulisées dans les taches du DAG. Il faut aussi le copier dans le répertoire dags/
+- utils.py : script regroupant les fonctions utilisées dans les taches du DAG. Il faut aussi le copier dans le répertoire dags/
 - README.md : description détaillée du DAG 
 - DAG.png : schéma du DAG
 
 ## Etapes de mise en oeuvre
 - Installation de Airflow
 - Définition du DAG
-    - schéma du DAG
+    - Schéma du DAG
     - Variables airflow
     - Collecte des données
     - Transformation des données
