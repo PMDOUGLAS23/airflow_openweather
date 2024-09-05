@@ -149,8 +149,3 @@ Pour alléger le fichier de définition du DAG, les principales fonctions utisé
     - Entrée : Liste de tuples contenant le nom du modèle, le score et l'instance du modèle.
     - Fonctionnement : Entraîne le meilleur modèle sur les données et le sauvegarde sous forme de fichier .pickle.
     - Sortie : Le nom du meilleur modèle et son score.
-    
-9. model_comparison1
-    - Rôle : Compare les scores de trois modèles (LinearRegression, DecisionTreeRegressor, et RandomForestRegressor) pour sélectionner le meilleur.
-    - Entrées : Scores des trois modèles.
-    - Fonctionnement : Entraîne et sauvegarde le modèle avec le score le plus bas (meilleur), puis renvoie son nom et son score.
