@@ -6,14 +6,14 @@ Mise en coeuvre d'un DAG qui permet de :
 - Entrainer des modèles de machine learning
 - et de comparer et choisir le meilleur modèle
 
-## le contenu du répertoire:
+## Contenu du répertoire:
 - setup.sh qui permet d'installer Airflow
 - open_weather_dag.py : fichier du DAG qu'il faudra copier dans le répertoire dags/
 - utils.py : script regroupant les fonctions utulisées dans les taches du DAG. Il faut aussi le copier dans le répertoire dags/
 - README.md : description détaillée du DAG 
 - DAG.png : schéma du DAG
 
-## Les étape de mise en oeuvre
+## Etapes de mise en oeuvre
 - Installation de Airflow
 - Definition du DAG
     - schéma du DAG
