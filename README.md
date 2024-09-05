@@ -6,7 +6,7 @@ Mise en coeuvre d'un DAG qui permet de :
 - Entrainer des modèles de machine learning,
 - Comparer les modèles et choisir le meilleur modèle.
 
-## Contenu du répertoire:
+## Contenu du répertoire
 - setup.sh qui permet d'installer Airflow
 - open_weather_dag.py : fichier du DAG qu'il faudra copier dans le répertoire dags/
 - utils.py : script regroupant les fonctions utulisées dans les taches du DAG. Il faut aussi le copier dans le répertoire dags/
@@ -45,13 +45,13 @@ chmod +x setup.sh
 
 ![Image](DAG.jpeg)
 
-### Variables Airflow :
+### Variables Airflow
 
 - cities : liste de villes pour lesquelles les données météo seront collectées (par défaut: Paris, Londres, Washington).
 - api_key : clé API pour accéder à OpenWeather.
 - clean_data_path : chemin de stockage des données nettoyées.
 
-### Tâches principales :
+### Tâches principales
 
 - fetch_weather_data (PythonOperator) : Utilise l'opérateur PythonOperator pour exécuter la fonction Python fetch_weather_data, qui collecte les données météo des villes spécifiées à l'aide de l'API OpenWeather et enregistre les résultats dans un fichier JSON horodaté. Cet opérateur permet d'intégrer du code Python directement dans le DAG.
 
@@ -75,7 +75,7 @@ chmod +x setup.sh
 
 - select_and_train_the_best_model (PythonOperator) : Cette tâche utilise un PythonOperator pour sélectionner le modèle ayant obtenu le meilleur score (parmi les trois modèles évalués précédemment) et l'entraîner. Cette fonction s'appuie sur les données des XComs partagées par les tâches précédentes pour choisir le modèle optimal.
 
-### Opérateurs spécifiques :
+### Opérateurs spécifiques
 
 - PythonOperator : Exécute des fonctions Python définies pour chaque tâche (collecte de données, transformation, entraînement des modèles). Cet opérateur est clé dans l'intégration de la logique métier (collecte de données et traitement).
 
