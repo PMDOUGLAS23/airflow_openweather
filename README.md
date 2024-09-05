@@ -15,7 +15,7 @@ Mise en coeuvre d'un DAG qui permet de :
 
 ## Etapes de mise en oeuvre
 - Installation de Airflow
-- Definition du DAG
+- Définition du DAG
     - schéma du DAG
     - Variables airflow
     - Collecte des données
@@ -35,7 +35,7 @@ l'installation se fait à partir du fichier setup.sh qui :
     - démarre finalement les conteneurs nécessaires en arrière-plan.
 
 Dans la ligne de commande, se positionner dans le répertoire projet, 
-attribuer les permissions d'execution au script setup.sh puis exécuter le script.
+attribuer les permissions d'exécution au script setup.sh puis exécuter le script.
 ```
 chmod +x setup.sh
 ./setup.sh
@@ -47,7 +47,7 @@ chmod +x setup.sh
 
 ### Variables Airflow :
 
-- cities : liste de villes pour lesquelles les données météo seront collectées (par   défaut : Paris, Londres, Washington, Yaoundé, Bamako).
+- cities : liste de villes pour lesquelles les données météo seront collectées (par défaut: Paris, Londres, Washington).
 - api_key : clé API pour accéder à OpenWeather.
 - clean_data_path : chemin de stockage des données nettoyées.
 
