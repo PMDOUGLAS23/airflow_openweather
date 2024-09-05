@@ -191,6 +191,8 @@ def prepare_data(path_to_data):
 
     return features, target
 
+
+# compare les scores des 3 modèles
 def model_comparison (models):
     """
     Compare les modèles et sélectionne celui avec le meilleur score.
@@ -220,41 +222,3 @@ def model_comparison (models):
 
     print(f"Le modèle {best_model_name} est le plus performant\navec un score neg_mean_sq_error de {best_score}.")
     return best_model_name, best_score
-
-
-# compare les scores des 3 modèles
-def model_comparison1(score_lr, score_dt, score_rf):
-
-    X, y = prepare_data('/app/clean_data/fulldata.csv')
-
-    # using neg_mean_square_error
-    if score_lr < score_dt and score_lr < score_rf:
-        best_score = score_lr
-        best_model = "LinearRegression"
-        train_and_save_model(
-            LinearRegression(),
-            X,
-            y,
-            '/app/clean_data/best_model.pickle'
-        ) 
-
-    elif score_dt < score_lr and score_dt < score_rf:
-        best_score = score_dt
-        best_model = "DecisionTreeRegressor"
-        train_and_save_model(
-            DecisionTreeRegressor(),
-            X,
-            y,
-            '/app/clean_data/best_model.pickle'
-        )
-    else:
-        best_score = score_rf
-        best_model = "RandomForestRegressor"
-        train_and_save_model(
-            RandomForestRegressor(),
-            X,
-            y,
-            '/app/clean_data/best_model.pickle'
-        )
-    print(f"Le modèle {best_model} est le plus performant\navec un score neg_mean_sq_error de {best_score}.")
-    return best_model, best_score
