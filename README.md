@@ -22,7 +22,7 @@ Mise en coeuvre d'un DAG qui permet de:
     - Transformation des données
     - Entrainement des modèles
     - Comparaison des modèles
-- Script regroupant les fonctions utilisées dans les taches du DAG
+- Script regroupant les fonctions utilisées dans les tâches du DAG
 
 
 ### Installation de Airflow
