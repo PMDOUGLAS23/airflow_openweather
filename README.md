@@ -93,7 +93,7 @@ chmod +x setup.sh
 
 - Enfin, le meilleur modèle est sélectionné et entraîné dans la tâche select_and_train_the_best_model.
 
-## Script regroupant les fonctions utilisées dans les taches du DAG : utils.py
+## Script regroupant les fonctions utilisées dans les tâches du DAG : utils.py
 Pour alléger le fichier de définition du DAG, les principales fonctions utisées dans les taches du DAG sont définit dans le fochier utils.py. Ce fonctions sont décrites ci-après.
 
 1. collect_data
